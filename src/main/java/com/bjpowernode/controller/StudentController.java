@@ -13,15 +13,14 @@ import java.util.List;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
-
     @Resource
     private StudentService service;
-
     //注册学生
     @RequestMapping("/addStudent.do")
     public ModelAndView addStudent(Student student){
         ModelAndView mv = new ModelAndView();
         String tips = "注册失败";
+        //测试
         //调用service处理student
         int nums = service.addStudent(student);
         if( nums > 0 ){
@@ -33,7 +32,6 @@ public class StudentController {
         //指定结果页面
         mv.setViewName("result");
         return mv;
-
     }
 
     //处理查询，响应ajax
