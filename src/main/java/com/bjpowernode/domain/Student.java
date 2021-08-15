@@ -12,6 +12,7 @@ public class Student {
     }
 
     public void setId(Integer id) {
+        System.out.println("genxin");
         this.id = id;
     }
 
